@@ -85,7 +85,20 @@ img {
     height: auto;
 }
 
-
+.section{
+    padding: 5.5rem 0 1rem;
+  }
+  
+  .section_title,
+  .section_title-center{
+    font-size: var(--h2-font-size);
+    margin-bottom: 2rem;
+    line-height: 140%;
+  }
+  
+  .section_title-center{
+    text-align: center;
+  }
 
 .container {
     max-width: 968px;
@@ -277,6 +290,86 @@ img {
 }
 
 
+.about_container {
+    row-gap: 2rem;
+}
+
+.about_img {
+    width: 280px;
+    justify-self: center;
+}
+
+.about_title {
+    margin-bottom: 1rem;
+}
+
+.about_description {
+    margin-bottom: 2rem;
+}
+
+.about_details {
+    display: grid;
+    row-gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.about_details ul {
+    list-style: inside;
+}
+
+
+.steps_bg {
+    background-color: var(--first-color);
+    padding: 3rem 2rem 2rem;
+    border-radius: 1rem;
+}
+
+.steps_container {
+    gap: 2rem;
+    padding-top: 1rem;
+}
+
+.steps_title {
+    color: #FFF;
+}
+
+.steps_card {
+    background-color: var(--container-color);
+    padding: 2.5rem 3rem 2rem 1.5rem;
+    border-radius: 1rem;
+}
+
+.steps_card-number {
+    display: inline-block;
+    background-color: var(--first-color-alt);
+    color: #FFF;
+    padding: .5rem .75rem;
+    border-radius: .25rem;
+    font-size: var(--h2-font-size);
+    margin-bottom: 1.5rem;
+    transition: .3s;
+}
+
+.steps_card-title {
+    font-size: var(--h3-font-size);
+    margin-bottom: .5rem;
+}
+
+.steps_card-description {
+    font-size: var(--small-font-size);
+}
+
+.steps_card:hover .steps_card-number {
+    transform: translateY(-.25rem);
+}
+
+
+@media screen and (min-width: 576px){
+    .steps_container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media screen and (min-width: 767px) {
     body {
         margin: 0;
@@ -296,7 +389,7 @@ img {
         margin-left: auto;
     }
 
-    .home_container {
+    .home_container .about_container {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -321,6 +414,15 @@ img {
         margin-right: auto;
     }
 
+    .section {
+        padding: 8rem 0 1rem;
+    }
+
+    .section_title,
+    .section_title-center {
+        font-size: var(--h1-font-size);
+    }
+
     .home {
         padding: 13rem 0 5rem;
     }
@@ -331,5 +433,21 @@ img {
 
     .home_description {
         padding-right: 7rem;
+    }
+
+    .about_img {
+        width: 380px;
+    }
+
+    .steps_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .steps_bg {
+        padding: 3.5rem 2.5rem;
+    }
+
+    .steps_card-title {
+        font-size: var(--normal-font-size);
     }
 }
