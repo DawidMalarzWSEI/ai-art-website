@@ -493,6 +493,95 @@ img {
     transform: rotate(45deg);
 }
 
+.contact_container {
+    row-gap: 3.5rem;
+}
+
+.contact_data {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.contact_subtitle {
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: var(--mb-0-5);
+}
+
+.contact_description {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    color: var(--title-color);
+    font-weight: 500;
+}
+
+.contact_inputs {
+    display: grid;
+    row-gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact_content {
+    position: relative;
+    height: 3rem;
+    border-bottom: 1px solid var(--text-color-light);
+}
+
+.contact_input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem 1rem 0;
+    background: none;
+
+    color: var(--text-color);
+
+
+    border: none;
+    outline: none;
+    z-index: 1;
+}
+
+.contact_label {
+    position: absolute;
+    top: .75rem;
+    width: 100%;
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    transition: .3s;
+}
+
+.contact_area {
+    height: 7rem;
+}
+
+.contact_area textarea {
+    resize: none;
+}
+
+.contact_input:focus+.contact_label {
+    top: -.75rem;
+    left: 0;
+    font-size: var(--smaller-font-size);
+    z-index: 10;
+}
+
+.contact_input:not(:placeholder-shown).contact_input:not(:focus)+.contact_label {
+    top: -.75rem;
+    font-size: var(--smaller-font-size);
+    z-index: 10;
+}
+
+.footer_copy {
+    text-align: center;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+    margin: 5rem 0 1rem;
+}
 
 @media screen and (max-width: 767px) {
     .nav_menu {
@@ -576,7 +665,8 @@ img {
 
     .home_container,
     .about_container,
-    .questions_container {
+    .questions_container,
+    .contact_container {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -680,6 +770,9 @@ img {
         padding: 0 3.5rem 2.25rem 2.75rem;
     }
 
+    .footer_copy {
+        margin: 7rem 0 2rem;
+    }
 }
 
 @media screen and (min-width: 1200px) {
