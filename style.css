@@ -2,7 +2,6 @@
 
 :root {
     --header-height: 3.5rem;
-    /*56px*/
     --first-color: rgba(45, 94, 107, 1);
     --first-color-alt: rgba(40, 83, 95, 1);
     --first-color-light: rgba(174, 200, 205, 1);
@@ -86,8 +85,6 @@ img {
     height: auto;
 }
 
-
-/*=============== REUSABLE CSS CLASSES ===============*/
 .section {
     padding: 5.5rem 0 1rem;
 }
@@ -115,7 +112,6 @@ img {
 
 .main {
     overflow: hidden;
-    /*For animation*/
 }
 
 .header {
@@ -208,7 +204,6 @@ img {
     content: url("images/img2.png");
 }
 
-/* Zdefiniuj animacje dla hovera */
 .home_img {
     animation: pulser 5s infinite;
 }
